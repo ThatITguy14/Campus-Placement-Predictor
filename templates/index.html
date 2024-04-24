@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Placement Predictor</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container my-4">
+      <!-- Intro -->
+
+      <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading text-center">Campus Recruitment Prediction</h4>
+        <p>
+          Campus recruitment is a strategy for sourcing, engaging and hiring
+          young talent for internship and entry-level positions. College
+          recruiting is typically a tactic for medium- to large-sized companies
+          with high-volume recruiting needs, but can range from small efforts
+          (like working with university career centers to source potential
+          candidates) to large-scale operations (like visiting a wide array of
+          colleges and attending recruiting events throughout the spring and
+          fall semester). Campus recruitment often involves working with
+          university career services centers and attending career fairs to meet
+          in-person with college students and recent graduates. Some industries
+          participate in campus recruiting more than others; finance,
+          technology, business consulting, manufacturing and engineering are a
+          few of the most popular.
+        </p>
+        <div class="container text-center">
+          <img
+            src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202002/main_image.jpeg?AEmB0MOrFThcKQ.8H2pvP3lMkJ5AxyxP&size=770:433"
+          />
+        </div>
+
+        <hr />
+        <p class="mb-0">
+          The dataset is collected from Kaggle website. Here is the link for the
+          <a
+            href="https://www.kaggle.com/datasets/chandhurubaskar/campus-placement-data-for-engineering-colleges.csv"
+            >dataset</a
+          >.The goal of this project is to analyze the factors that can effect
+          the Campus Recruitment, and also creating a model which will predict
+          the chances of getting placed depending on various factors.
+        </p>
+      </div>
+      <!-- Form -->
+      <h3 class="text-center">Campus Placement Predictor</h3>
+      <form action="/" method="POST">
+        <!-- Projects -->
+        <div class="form-group">
+          <label for="Projects">Number of Projects</label>
+          <select class="form-control" id="Projects" name="Projects">
+            <option value="1">1</option>
+            <option value="0">0</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+        <!-- Internships -->
+        <div class="form-group">
+          <label for="Internships">Number of Internships</label>
+          <select class="form-control" id="Internships" name="Internships">
+            <option value="1">1</option>
+            <option value="0">0</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+        <!-- Workshops_Certifications -->
+        <div class="form-group">
+          <label for="Workshops_Certifications"
+            >Number of Workshops/Certifications</label
+          >
+          <select
+            class="form-control"
+            id="Workshops_Certifications"
+            name="Workshops_Certifications"
+          >
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+        <!-- ExtracurricularActivities -->
+        <div class="form-group">
+          <label for="ExtracurricularActivities"
+            >Have Extracurricular Activities?</label
+          >
+          <select
+            class="form-control"
+            id="ExtracurricularActivities"
+            name="ExtracurricularActivities"
+          >
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </div>
+        <!-- SSC_Marks -->
+        <div class="form-group">
+          <label for="SSC_Marks">SSC Percentage</label>
+          <input
+            type="text"
+            class="form-control"
+            id="SSC_Marks"
+            name="SSC_Marks"
+          />
+        </div>
+        <!-- HSC_Marks -->
+        <div class="form-group">
+          <label for="HSC_Marks">High School Percentage</label>
+          <input
+            type="text"
+            class="form-control"
+            id="HSC_Marks"
+            name="HSC_Marks"
+          />
+        </div>
+        <!-- SoftSkillsRating -->
+        <div class="form-group">
+          <label for="SoftSkillsRating">Soft Skills Rating</label>
+          <input
+            type="text"
+            class="form-control"
+            id="SoftSkillsRating"
+            name="SoftSkillsRating"
+          />
+        </div>
+        <!-- PlacementTraining -->
+        <div class="form-group">
+          <label for="PlacementTraining">Have Placement Training?</label>
+          <select
+            class="form-control"
+            id="PlacementTraining"
+            name="PlacementTraining"
+          >
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </div>
+        <!-- AptitudeTestScore -->
+        <div class="form-group">
+          <label for="AptitudeTestScore">Aptitude Test Score</label>
+          <input
+            type="text"
+            class="form-control"
+            id="AptitudeTestScore"
+            name="AptitudeTestScore"
+          />
+        </div>
+        <!-- CGPA -->
+        <div class="form-group">
+          <label for="CGPA">CGPA</label>
+          <input type="text" class="form-control" id="CGPA" name="CGPA" />
+        </div>
+        <!-- Submit Button -->
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Predict</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
